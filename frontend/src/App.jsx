@@ -15,7 +15,7 @@ import ComponentCard from './components/ComponentCard';
 import SampleTexts from './components/SampleTexts';
 
 // ⚠️ UPDATE THIS URL after deploying your backend to Render
-const API_URL = 'https://your-app-name.onrender.com';  // e.g., 'https://clinical-api.onrender.com'
+const API_URL = 'https://clinical-api-jjbx.onrender.com';  // e.g., 'https://clinical-api.onrender.com'
 
 // For local development, use:
 // const API_URL = 'http://localhost:5000';

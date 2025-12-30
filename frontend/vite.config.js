@@ -4,7 +4,7 @@ import react from '@vitejs/plugin-react'
 // https://vitejs.dev/config/
 export default defineConfig({
   plugins: [react()],
-  base: '/clinical-ui/', // UPDATE: Change to your repo name
+  base: '/clinical-api/', // UPDATE: Change to your repo name
   build: {
     outDir: 'dist',
     sourcemap: false,
