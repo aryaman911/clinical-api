@@ -1,0 +1,31 @@
+# render.yaml - Render Blueprint Specification
+# Deploy with: render blueprint sync
+
+services:
+  - type: web
+    name: clinical-component-api
+    runtime: python
+    region: oregon  # Change to your preferred region
+    plan: free      # Use 'starter' for production
+    branch: main
+    
+    # Build configuration
+    buildCommand: pip install -r requirements.txt
+    startCommand: gunicorn app:app
+    
+    # Health check
+    healthCheckPath: /
+    
+    # Environment variables
+    envVars:
+      - key: PYTHON_VERSION
+        value: 3.11.0
+      - key: OPENAI_API_KEY
+        sync: false  # Set manually in dashboard
+      - key: FINE_TUNED_MODEL
+        sync: false  # Set after fine-tuning completes
+      - key: FLASK_ENV
+        value: production
+
+    # Auto-deploy on push
+    autoDeploy: true
